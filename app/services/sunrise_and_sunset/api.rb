@@ -2,9 +2,7 @@ class SunriseAndSunset::Api
   attr_reader :base_query
 
   def initialize(lat:, lng:)
-    puts Resolv.getaddress(SunriseSunset::Config.get("SUNRISE_SUNSET_API_BASE_URL"))
-    full_url = "https://#{SunriseSunset::Config.get("SUNRISE_SUNSET_API_BASE_URL")}"
-    @conn = Faraday.new(url: full_url) do |faraday|
+    @conn = Faraday.new(url: SunriseSunset::Config.get("SUNRISE_SUNSET_API_BASE_URL")) do |faraday|
       faraday.options.open_timeout = 10
       faraday.options.timeout = 10
       faraday.adapter Faraday.default_adapter

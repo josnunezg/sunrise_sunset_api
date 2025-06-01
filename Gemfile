@@ -6,7 +6,6 @@ gem "rails", "~> 8.0.2"
 gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
-gem "httparty"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -29,6 +28,8 @@ gem "kamal", require: false
 
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem "thruster", require: false
+gem "interactor"
+gem "faraday"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -42,17 +43,21 @@ group :development, :test do
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
-  gem 'faker'
-  gem 'factory_bot_rails'
+  gem "faker"
+  gem "factory_bot_rails"
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
-  gem 'rspec-rails', '~> 8.0.0'
-  gem 'dotenv-rails'
+  gem "rspec-rails", "~> 8.0.0"
+  gem "dotenv-rails"
+  gem "byebug"
+  gem "ruby-lsp"
+  gem "pry"
+  gem "pry-remote"
 end
 
 group :test do
-  gem 'database_cleaner-active_record'
-  gem 'shoulda-matchers', '~> 6.0'
+  gem "database_cleaner-active_record"
+  gem "shoulda-matchers", "~> 6.0"
   gem "webmock"
 end

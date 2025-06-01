@@ -13,6 +13,8 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :query_search, only: :index
   # Defines the root path route ("/")
   # root "posts#index"
 end

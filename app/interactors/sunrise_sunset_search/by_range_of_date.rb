@@ -6,8 +6,10 @@ class SunriseSunsetSearch::ByRangeOfDate
   def call
     return if date_start.nil? || date_end.nil?
 
+    range = (date_start..date_end).to_a
+
     result_from_cache = search_on_cache
-    if result_from_cache.any?
+    if result_from_cache.any? && result_from_cache.size == range.size
       context.result = result_from_cache
       context.from_cache = true and return
     end

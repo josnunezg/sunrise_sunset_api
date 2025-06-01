@@ -11,7 +11,7 @@ class CitiesController < ApplicationController
     if result.success?
       render json: { country: @country.to_json, city: @city.to_json, data: result.result.reverse }, status: :ok
     else
-      render json: { error: result.error }, status: :unprocess_entity
+      render json: { error: result.error }, status: :bad_request
     end
   end
 

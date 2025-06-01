@@ -10,6 +10,8 @@ class CoordinatesSeacher
     result = response.body.first
     context.lat = result["lat"].to_f
     context.lng = result["lon"].to_f
+    context.city_name = result["name"]
+    context.country_name = result["display_name"].split(",").last.strip
   end
 
   private

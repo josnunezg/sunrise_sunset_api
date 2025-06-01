@@ -2,6 +2,17 @@
 
 A Ruby on Rails 8 application built with Ruby 3.2.2, integrating external APIs for sunrise/sunset data and geolocation services.
 
+## 📚 Table of Contents
+
+- [Requirements](#-requirements)
+- [Project Setup](#-project-setup)
+  - [Environment Variables](#-environment-variables)
+  - [macOS Setup](#-macos-setup)
+  - [Linux Setup](#-linux-setup)
+  - [Docker Setup](#-docker-setup)
+- [Running Tests](#-running-tests)
+- [Troubleshooting](#-troubleshooting)
+
 ## 📦 Requirements
 
 - Ruby 3.2.2 (recommended via rbenv or rvm)
@@ -27,7 +38,7 @@ DATABASE_PORT=
 > 🧠 Use .env to manage environment variables. Required for both local and Docker usage.
 > FRONTEND_API_KEY must be a UUID (see below for generation methods).
 
-## 🍏 macOS Setup
+### 🍏 macOS Setup
 
 1. Install rbenv & Ruby:
 ```bash
@@ -73,9 +84,9 @@ rails db:prepare
 ```bash
 rails server
 ```
-Visit `http://localhost:3000.``
+Visit `http://localhost:3000`.
 
-## 🐧 Linux Setup
+### 🐧 Linux Setup
 1. Install rbenv & Ruby:
 
 ```bash
@@ -125,7 +136,7 @@ rails server
 ```
 Visit `http://localhost:3000`.
 
-## 🐳 Docker Setup
+### 🐳 Docker Setup
 1. Install Docker & Docker Compose:
 
 - [Docker Installation](https://docs.docker.com/get-docker/)
@@ -149,11 +160,11 @@ docker-compose up --build
 ```
 Access the app via `http://localhost:3001`.
 
-## 🧪 Running Tests
+### 🧪 Running Tests
 ```bash
 bundle exec rspec
 ```
-## 🛠️ Troubleshooting
+### 🛠️ Troubleshooting
 - PostgreSQL Connection Errors: Check `.env` and PostgreSQL service status.
 - Missing Gems: Run `bundle install`.
 - Docker Logs: Use `docker-compose logs` for diagnostics.

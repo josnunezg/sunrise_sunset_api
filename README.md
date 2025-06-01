@@ -124,3 +124,36 @@ rails db:prepare
 rails server
 ```
 Visit `http://localhost:3000`.
+
+## 🐳 Docker Setup
+1. Install Docker & Docker Compose:
+
+- [Docker Installation](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+2. Set Up .env:
+
+```env
+SUNRISE_SUNSET_API_BASE_URL="https://api.sunrisesunset.io"
+FRONTEND_API_KEY=<your-generated-uuid>
+OPENSTREET_NOMINATIM_API_BASE_URL="https://nominatim.openstreetmap.org"
+DATABASE_HOST=db
+DATABASE_USER=postgres
+DATABASE_PASSWORD=postgres
+DATABASE_PORT=5432
+```
+3. Start with Docker Compose:
+
+```bash
+docker-compose up --build
+```
+Access the app via `http://localhost:3001`.
+
+## 🧪 Running Tests
+```bash
+bundle exec rspec
+```
+## 🛠️ Troubleshooting
+- PostgreSQL Connection Errors: Check `.env` and PostgreSQL service status.
+- Missing Gems: Run `bundle install`.
+- Docker Logs: Use `docker-compose logs` for diagnostics.

@@ -23,7 +23,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_26_213556) do
     t.string "dawn"
     t.string "dusk"
     t.string "solar_noon"
-    t.string "golder_hour"
+    t.string "golden_hour"
     t.string "day_length"
     t.string "timezone"
     t.integer "utc_offset"

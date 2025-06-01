@@ -9,7 +9,7 @@ class CreateSunriseSunsetInfos < ActiveRecord::Migration[8.0]
       t.string :dawn
       t.string :dusk
       t.string :solar_noon
-      t.string :golder_hour
+      t.string :golden_hour
       t.string :day_length
       t.string :timezone
       t.integer :utc_offset
